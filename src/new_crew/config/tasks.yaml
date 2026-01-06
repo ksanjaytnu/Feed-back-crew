@@ -1,0 +1,34 @@
+collect_user_feedback:
+  description: >
+    Summarize commonly reported user feedback patterns for {{ company_name }}.
+    Focus on widely known strengths, weaknesses, praise, and complaints
+    based on general public perception.
+  expected_output: >
+    Bullet points grouped into:
+    - Positive feedback
+    - Negative feedback
+    - Common complaints
+    - Repeated praise
+  agent: feedback_collector
+
+
+analyze_industry_feedback:
+  description: >
+    Analyze industry-level perception of {{ company_name }} based on
+    known market positioning, analyst commentary patterns, and ecosystem role.
+  expected_output: >
+    Bullet points covering strengths, weaknesses, and perception gaps.
+  agent: industry_analyst
+
+synthesize_final_insights:
+  description: >
+    Combine user feedback patterns and industry perception into
+    a concise executive report for {{ company_name }}.
+  expected_output: >
+    Bullet points only (max 300 words):
+    - Key strengths
+    - Major weaknesses
+    - Reputation risks
+    - Improvement opportunities
+    - Strategic recommendations
+  agent: insight_synthesizer
